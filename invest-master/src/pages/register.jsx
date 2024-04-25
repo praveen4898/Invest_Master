@@ -12,7 +12,7 @@ export default function SignUp() {
       e.preventDefault();
 
       console.log(username,email, password);
-      fetch("http://localhost:8080/users/register", {
+      fetch("https://busy-jade-dugong-coat.cyclic.app/users/register", {
         method: "POST",
         crossDomain: true,
         headers: {
