@@ -10,7 +10,7 @@ export default function Login() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("http://localhost:8080/users/login", {
+    fetch("https://busy-jade-dugong-coat.cyclic.app/users/login", {
       method: "POST",
       crossDomain: true,
       headers: {
