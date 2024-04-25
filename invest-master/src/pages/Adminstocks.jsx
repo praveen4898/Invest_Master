@@ -43,7 +43,7 @@ const Adminstocks = () => {
 
   const fetchAdminStock = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/adminstocks/",{
+      const response = await axios.get("https://busy-jade-dugong-coat.cyclic.app/adminstocks/",{
         headers:{
           "Content-type":"application/json",
           authorization:`Bearer ${localStorage.getItem("token")}`
@@ -73,7 +73,7 @@ const Adminstocks = () => {
   // Admin deletes a stock
   const handleDeleteStock = async (stockId) => {
     try {
-      await axios.delete(`http://localhost:8080/adminstocks/${stockId}`,{
+      await axios.delete(`https://busy-jade-dugong-coat.cyclic.app/adminstocks/${stockId}`,{
         method:"DELETE",
         headers:{
           "Content-type":"application/json",
@@ -107,7 +107,7 @@ const Adminstocks = () => {
     try {
       // Send the entire selectedStock object
       await axios.patch(
-        `http://localhost:8080/adminstocks/${selectedStock._id}`,
+        `https://busy-jade-dugong-coat.cyclic.app/adminstocks/${selectedStock._id}`,
         selectedStock,{
           method:"PATCH",
           headers:{
@@ -149,7 +149,7 @@ const Adminstocks = () => {
   const handleAddStock = async () => {
     try {
       // Send a POST request to add a new stock
-      await axios.post("http://localhost:8080/adminstocks", newStock,
+      await axios.post("https://busy-jade-dugong-coat.cyclic.app/adminstocks", newStock,
       {
         method:"POST",
         headers:{
