@@ -59,7 +59,7 @@ const Cardstock = ({ data }) => {
 
       try {
         const totalPrice = selectedStock.price * (quantity[selectedStock.id] || 1);
-        await axios.post("http://localhost:8080/portfolio", {
+        await axios.post("https://busy-jade-dugong-coat.cyclic.app/portfolio", {
           // userId: "",  //(Add userid)
           user:localStorage.getItem("email"),
           name: selectedStock.name,
